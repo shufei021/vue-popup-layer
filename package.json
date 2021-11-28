@@ -1,0 +1,20 @@
+{
+    "name": "vue-popup-layer",
+    "version": "0.0.14",
+    "description": "Mobile popup layer",
+    "private": false,
+    "main": "./index.js",
+    "dependencies": {},
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": ["Physical return","Back button","back","layer","popup-layer","vue-popup-layer","vue-popup","vue-layer","layer","popup"],
+    "author": "shufei",
+    "license": "ISC",
+    "homepage": "",
+    "repository": {
+        "type": "",
+        "url": ""
+    }
+}
