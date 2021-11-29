@@ -1,6 +1,6 @@
 # vue-popup-layer
 
-> This is a physical return component based on vue2.0. When you write an H5 page on the mobile terminal, you often just want to open a pop-up layer on the current page. You don’t want to operate and click the physical return button in the upper left corner to return to the current page. That is, it is always on the current page, and the component was born at the historic moment 
+这是一个基于vue2.0的物理返回组件。 在移动端编写H5页面时，往往只想在当前页面打开一个弹出层。 不想操作，点击左上角物理返回按钮返回当前页面。 即始终在当前页面，这样做的好处就是能保持数据的状态不变 
 
 
 
@@ -37,16 +37,18 @@ Vue.use(PopupLayer)
 
 # feature
 
-+ visible : Whether to display the pop-up layer, its value is a Boolean  
-+ isAnimation: Whether transition animation effect is needed, its value is a Boolean value 
-+ zIndex: The level of the pop-up layer 
-+ extra: Attached data of the pop-up layer 
-+ autoIndex: Whether the pop-up layer is adaptive to the highest level of the page DOM, the priority is higher than the set zIndex 
++ visible : 是否显示弹出层，其值为布尔值
++ isAnimation: 是否需要过渡动画效果，其值为布尔值
++ zIndex：弹出层的层级
++ extra：弹出层的附加数据
++ autoIndex：弹出层是否自适应页面最高层DOM，优先级高于设置的zIndex 
+
 # methods
-+ onOpen: Callback function for opening the pop-up layer 
-+ onClose: Callback function for closing the popup layer 
-+ backLvBy: Return to the specified level through the condition, the page level is 0 
-+ refs.popuplayerName.closeLv: Close the specified bomb layer by ref 
+
++ onOpen：打开弹出层的回调函数
++ onClose：关闭弹出层的回调函数
++ backLvBy：通过条件返回指定级别，页面级别为0
+
 
 home:
 
@@ -116,9 +118,8 @@ export default {
 </script>
 ```
 ## update log
-+ Added the backLvBy method to return to the specified layer by condition, the page level is 0  (2021/11/20)
-+ Add elastic layer DOM adaptive z-index attribute autoIndex  (2021/11/18)
-+ Fixed the issue of returning invalid after opening multiple pop-up layers when refreshing the page (2021/11/17)
-+ Added a new method closeLv that can close multiple bomb layers (2021/11/14)
++ 新增backLvBy方法，按条件返回指定图层，页面级别为0 (2021/11/20)
++ 添加弹性层DOM自适应z-index属性autoIndex (2021/11/18)
++ 修复刷新页面时打开多个弹窗返回无效的问题 (2021/11/17)
 
 
