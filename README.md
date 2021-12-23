@@ -42,6 +42,7 @@ Vue.use(PopupLayer)
 + zIndex: The level of the pop-up layer 
 + extra: Attached data of the pop-up layer 
 + autoIndex: Whether the pop-up layer is adaptive to the highest level of the page DOM, the priority is higher than the set zIndex 
++ isAsync : Whether the component is loaded asynchronously 
 # methods
 + onOpen: Callback function for opening the pop-up layer 
 + onClose: Callback function for closing the popup layer 
@@ -116,6 +117,7 @@ export default {
 </script>
 ```
 ## update log
++ Add a new feature isAsync to solve asynchronous loading of PopupLayer components   (2021/12/23)
 + Added the backLvBy method to return to the specified layer by condition, the page level is 0  (2021/11/20)
 + Add elastic layer DOM adaptive z-index attribute autoIndex  (2021/11/18)
 + Fixed the issue of returning invalid after opening multiple pop-up layers when refreshing the page (2021/11/17)
