@@ -1,6 +1,6 @@
 # vue-popup-layer
 
-> This is a physical return component based on vue2.0. When you write an H5 page on the mobile terminal, you often just want to open a pop-up layer on the current page. You don’t want to operate and click the physical return button in the upper left corner to return to the current page. That is, it is always on the current page, and the component was born at the historic moment 
+这是一个基于vue2.0的物理返回组件。 在移动端编写H5页面时，往往只想在当前页面打开一个弹出层。 不想操作，点击左上角物理返回按钮返回当前页面。 即始终在当前页面，这样做的好处就是能保持数据的状态不变 
 
 
 
@@ -44,10 +44,11 @@ Vue.use(PopupLayer)
 + autoIndex: Whether the pop-up layer is adaptive to the highest level of the page DOM, the priority is higher than the set zIndex 
 + isAsync : Whether the component is loaded asynchronously 
 # methods
-+ onOpen: Callback function for opening the pop-up layer 
-+ onClose: Callback function for closing the popup layer 
-+ backLvBy: Return to the specified level through the condition, the page level is 0 
-+ refs.popuplayerName.closeLv: Close the specified bomb layer by ref 
+
++ onOpen：打开弹出层的回调函数
++ onClose：关闭弹出层的回调函数
++ backLvBy：通过条件返回指定级别，页面级别为0
+
 
 home:
 
