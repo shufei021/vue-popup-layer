@@ -65,6 +65,10 @@ export default {
       type: String,
       default: 'localStorage'
     },
+    getContainer:{
+      type:[Function, String],
+      default: ''
+    },
     isAsync: Boolean
   },
   data() {
@@ -81,6 +85,11 @@ export default {
     }
   },
   mounted() {
+     if(typeof this.getContainer === 'function'){//函数
+      this.getContainer().appendChild(this.$el)
+    }else if(this.getContainer){//字符串
+      document.querySelector(this.getContainer).appendChild(this.$el)
+    }
     // 如果该组件都不存在被销毁了，那么得移出 对 listener 的监听
     this.$once('hook:beforeDestroy', () => {
       window.removeEventListener('popstate', this.listener)
@@ -195,6 +204,11 @@ export default {
           callBack && callBack(i)
         }, i * 30)
       }
+    }
+  },
+  destroyed() {
+    if (this.$el && this.$el.parentNode) {
+      this.$el.parentNode.removeChild(this.$el);
     }
   }
 }

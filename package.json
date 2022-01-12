@@ -1,6 +1,6 @@
 {
     "name": "vue-popup-layer",
-    "version": "0.0.15",
+    "version": "0.0.17",
     "description": "Mobile popup layer",
     "private": false,
     "main": "./index.js",
@@ -12,9 +12,12 @@
     "keywords": ["Physical return","Back button","back","layer","popup-layer","vue-popup-layer","vue-popup","vue-layer","layer","popup"],
     "author": "shufei",
     "license": "ISC",
-    "homepage": "",
+    "homepage": "https://github.com/shufei021/vue-popup-layer#readme",
     "repository": {
-        "type": "",
-        "url": ""
+        "type": "git",
+        "url": "git+https://github.com/shufei021/vue-popup-layer.git"
+    },
+    "bugs": {
+        "url": "https://github.com/shufei021/vue-popup-layer/issues"
     }
 }

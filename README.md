@@ -43,6 +43,8 @@ Vue.use(PopupLayer)
 + extra: Attached data of the pop-up layer 
 + autoIndex: Whether the pop-up layer is adaptive to the highest level of the page DOM, the priority is higher than the set zIndex 
 + isAsync : Whether the component is loaded asynchronously 
++ getContainer : Specifies the mount node, whose value can be a selection class name or a function 
+
 # methods
 
 + onOpen：Callback function to open the popup layer 
@@ -118,6 +120,7 @@ export default {
 </script>
 ```
 ## update log
++ Add mount to the specified node property getContainer    (2022/1/12)
 + Add a new feature isAsync to solve asynchronous loading of PopupLayer components   (2021/12/23)
 + Added the backLvBy method to return to the specified layer by condition, the page level is 0  (2021/11/20)
 + Add elastic layer DOM adaptive z-index attribute autoIndex  (2021/11/18)
