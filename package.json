@@ -1,6 +1,6 @@
 {
     "name": "vue-popup-layer",
-    "version": "0.0.17",
+    "version": "0.0.18",
     "description": "Mobile popup layer",
     "private": false,
     "main": "./index.js",

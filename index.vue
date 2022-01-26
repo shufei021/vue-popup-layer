@@ -14,7 +14,7 @@
 <script>
 const listener = function (e) {
   // 浏览器历史状态  （控制台可以直接输入：history）
-  const curState = e.state && e.state.id ? e.state.id : ''
+  const curState = e.state && e.state.key ? e.state.key: ''
   // 获取当前的 本地popuplayer历史记录
   const historyState = this.store().getCur()
   // 获取弹出层的层级数
@@ -116,9 +116,8 @@ export default {
       // 为保证无依赖，我们采用 localStorage
       const name = this.storeName
       const store = window[this.storeType]
-      const parse = JSON.parse
       const stringify = JSON.stringify
-      const old = parse(store.getItem(name))
+      const old =store.getItem(name)?  JSON.parse(store.getItem(name)) :[]
       return {
         reset() {
           if (!store.getItem(name) || old.length) store.setItem(name, stringify([]))
@@ -156,7 +155,7 @@ export default {
      */
     show() {
       // 历史堆栈 push 一个 状态
-      window.history.pushState({ id: this.id }, '')
+      window.history.pushState({ key: this.id }, '')
       // 本地历史堆栈数字同步记录
       this.store().push(this.id)
       // 对外抛出弹出层打开事件

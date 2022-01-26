@@ -120,6 +120,7 @@ export default {
 </script>
 ```
 ## update log
++ Fix the bug that the initial get ID is null (2022/1/26)
 + Add mount to the specified node property getContainer    (2022/1/12)
 + Add a new feature isAsync to solve asynchronous loading of PopupLayer components   (2021/12/23)
 + Added the backLvBy method to return to the specified layer by condition, the page level is 0  (2021/11/20)
